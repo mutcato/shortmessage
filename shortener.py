@@ -2,6 +2,7 @@ from sheet import Sheet
 import bitly_api
 from dotenv import load_dotenv
 import os
+import settings
 load_dotenv()
 
 access_token = os.getenv("access_token")
@@ -9,8 +10,7 @@ c = bitly_api.Connection(access_token = access_token)
 
 table = Sheet("arac-tel","Sheet1")
 
-raw_video_url = table.get_value_from("youtube_url")
-print(raw_video_url)
+raw_video_url = table.worksheet.acell(settings.long_url_cell).value
 starting_row = table.first_empty_row("shortened-video-url")
 end_row = starting_row + 30
 

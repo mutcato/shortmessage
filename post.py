@@ -41,7 +41,7 @@ def send_short_message(driver, phone, text):
 	time.sleep(2)
 	phone_button = driver.find_element_by_xpath("/html/body/mw-app/div/main/mw-main-container/div[1]/mw-new-conversation-container/div/mw-contact-selector-button/button/span")
 	phone_button.click()
-	time.sleep(10)
+	time.sleep(12)
 	# text_field = driver.find_element_by_css_selector('textarea.input')
 	# text_field.send_keys(text)
 	# time.sleep(2)

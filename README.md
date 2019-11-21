@@ -12,7 +12,11 @@ __3.__ Create bit.ly account
  
         Click Settings on top right > Settings > Advanced Settings > API Support > User settings > Type your password and click Generate Token > Copy that token
 
- __4.__ Create a Google App 
+ __4.__ Create a .env file inside the project directory. Put the access token you have copied from bit.ly
+ 
+        access_token=f*************df
+
+ __5.__ Create a Google App 
  
         with following the <a href="https://github.com/mutcato/AutoLoginTest">instructions</a> in steps 1-5.
         After you have downloaded the json file that you created at step 5, name it as googlecredentials.json
@@ -25,17 +29,18 @@ __3.__ Create bit.ly account
 
  __7.__ Set up the settings.py
  
-        # Chromedriverın dosya yolu
+        # Chromedriverın tam dosya yolu (absolute path)
         CHROME_DRIVER = "chromedriver.exe"
         # developers.google.com'dan indirilen json dosyası
         CREDENTIALS = "/googlecredentials.json"
-        # name of the sheet file
         FILE_NAME = "arac-tel"
         SHEET_NAME = "Sheet1"
+        # URL which will be shortened
+        long_url_cell = 'F2'
         # mesaj göndermye kaçıncı satırdan başlasın? 2. satırdan başlıyor.
-        starting_row = 2
+        starting_row = 20
         # kaçıncı satırda bitirsin? 22. satırda bitiriyor.
-        end_row = starting_row + 20
+        end_row = starting_row + 40
     
 
  __8.__ Run the shortener code
