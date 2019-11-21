@@ -1,5 +1,5 @@
 # SHORT MESSAGE SENDER
-## Install MySQL and PHPMYADMIN on Rasbian OS
+## 
 __1.__ git clone 
  
         git clone https://github.com/mutcato/shortmessage.git
